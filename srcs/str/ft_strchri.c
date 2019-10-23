@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchri_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_strchri.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anonymous <anonymous@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 13:37:49 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/10/10 16:42:31 by jukerboe         ###   ########.fr       */
+/*   Updated: 2019/10/23 20:42:58 by anonymous        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strchri(char const *s, int c)
+int	ft_strchri(char const *s, int c)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	if (s[i] == c && !c)
@@ -27,5 +27,5 @@ size_t	ft_strchri(char const *s, int c)
 	}
 	if (s[i] == c && !c)
 		return (i);
-	return (0);
+	return (-1);
 }

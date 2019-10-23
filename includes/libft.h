@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anonymous <anonymous@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:54:52 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/10/23 15:30:59 by jukerboe         ###   ########.fr       */
+/*   Updated: 2019/10/23 20:43:42 by anonymous        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ void				ft_str_tolower(char *str);
 void				ft_str_toupper(char *str);
 char				*ft_strcat(char *s1, char const *s2);
 char				*ft_strchr(char const *s, int c);
-size_t				ft_strchri(char const *s, int c);
+int					ft_strchri(char const *s, int c);
 void				ft_strclr(char *s);
 int					ft_strcmp(char const *s1, char const *s2);
 char				*ft_strcpy(char *dst, char const *src);
@@ -132,7 +132,7 @@ char				*ft_strndup(char const *src, size_t n);
 char				*ft_strnew(size_t size);
 char				*ft_strnstr(char const *stack, char const *find, size_t n);
 char				*ft_strrchr(char const *s, int c);
-size_t				ft_strrchri(char const *s, int c);
+int					ft_strrchri(char const *s, int c);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strstr(char const *stack, char const *needle);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
