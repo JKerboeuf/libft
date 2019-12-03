@@ -6,7 +6,7 @@
 #    By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 11:26:10 by jukerboe          #+#    #+#              #
-#    Updated: 2019/10/23 15:27:29 by jukerboe         ###   ########.fr        #
+#    Updated: 2019/12/03 15:10:26 by jukerboe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,6 +59,7 @@ SRCS =	char/ft_isalnum.c \
 		mem/ft_memmove.c \
 		mem/ft_memset.c \
 		mem/ft_realloc.c \
+		mem/ft_swap.c \
 		\
 		put/ft_putchar.c \
 		put/ft_putchar_fd.c \
@@ -110,11 +111,21 @@ SRCS =	char/ft_isalnum.c \
 		str/ft_strsplit.c \
 		str/ft_strstr.c \
 		str/ft_strsub.c \
-		str/ft_strtrim.c
+		str/ft_strtrim.c \
+		\
+		ft_printf/ft_printf.c \
+		ft_printf/pf_dispatch.c \
+		ft_printf/pf_parsing.c \
+		ft_printf/pf_print_char.c \
+		ft_printf/pf_print_hex.c \
+		ft_printf/pf_print_nbr.c \
+		ft_printf/pf_print_ptr.c \
+		ft_printf/pf_print_str.c \
+		ft_printf/pf_put.c
 
 OBJS = $(SRCS:.c=.o)
 OBJS_DIR = objs
-OBJS_SUB_DIRS = char list math mem put str
+OBJS_SUB_DIRS = char list math mem put str ft_printf
 OBJS_PRE = $(addprefix $(OBJS_DIR)/, $(OBJS))
 
 INC = -I $(INC_DIR)

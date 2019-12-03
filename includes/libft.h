@@ -6,7 +6,7 @@
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:54:52 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/10/23 20:52:39 by jukerboe         ###   ########.fr       */
+/*   Updated: 2019/12/03 15:09:44 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+
+# include "ft_printf.h"
 
 typedef struct		s_list
 {
@@ -77,6 +79,7 @@ void				ft_memdel(void **ptr);
 void				*ft_memmove(void *dst, void const *src, size_t len);
 void				*ft_memset(void *b, int c, size_t len);
 void				*ft_realloc(void *ptr, size_t old, size_t size);
+void				ft_swap(char *a, char *b);
 
 /*
 **	PUT
