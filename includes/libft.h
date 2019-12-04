@@ -6,7 +6,7 @@
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:54:52 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/12/03 15:09:44 by jukerboe         ###   ########.fr       */
+/*   Updated: 2019/12/04 15:30:12 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 
 # include "ft_printf.h"
+# include "get_next_line.h"
 
 typedef struct		s_list
 {

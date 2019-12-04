@@ -6,7 +6,7 @@
 #    By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 11:26:10 by jukerboe          #+#    #+#              #
-#    Updated: 2019/12/03 15:10:26 by jukerboe         ###   ########.fr        #
+#    Updated: 2019/12/04 15:32:16 by jukerboe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -121,11 +121,13 @@ SRCS =	char/ft_isalnum.c \
 		ft_printf/pf_print_nbr.c \
 		ft_printf/pf_print_ptr.c \
 		ft_printf/pf_print_str.c \
-		ft_printf/pf_put.c
+		ft_printf/pf_put.c \
+		\
+		get_next_line/get_next_line.c
 
 OBJS = $(SRCS:.c=.o)
 OBJS_DIR = objs
-OBJS_SUB_DIRS = char list math mem put str ft_printf
+OBJS_SUB_DIRS = char list math mem put str ft_printf get_next_line
 OBJS_PRE = $(addprefix $(OBJS_DIR)/, $(OBJS))
 
 INC = -I $(INC_DIR)
