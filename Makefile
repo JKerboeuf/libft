@@ -6,7 +6,7 @@
 #    By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 11:26:10 by jukerboe          #+#    #+#              #
-#    Updated: 2019/12/04 15:32:16 by jukerboe         ###   ########.fr        #
+#    Updated: 2020/04/27 14:52:48 by jukerboe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -111,6 +111,7 @@ SRCS =	char/ft_isalnum.c \
 		str/ft_strsplit.c \
 		str/ft_strstr.c \
 		str/ft_strsub.c \
+		str/ft_strsurr.c \
 		str/ft_strtrim.c \
 		\
 		ft_printf/ft_printf.c \

@@ -6,7 +6,7 @@
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:54:52 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/12/04 15:30:12 by jukerboe         ###   ########.fr       */
+/*   Updated: 2020/04/27 14:52:15 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,6 +140,7 @@ int					ft_strrchri(char const *s, int c);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strstr(char const *stack, char const *needle);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
+char				*ft_strsurr(char const *src, char add);
 char				*ft_strtrim(char const *s1, char const *set);
 
 #endif
