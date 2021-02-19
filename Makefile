@@ -6,12 +6,13 @@
 #    By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 11:26:10 by jukerboe          #+#    #+#              #
-#    Updated: 2020/04/27 14:52:48 by jukerboe         ###   ########.fr        #
+#    Updated: 2021/02/19 10:48:29 by jukerboe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 RED = \033[31m
 GREEN = \033[32m
+YELLOW = \033[33m
 BLUE = \033[34m
 MAGENTA = \033[35m
 CYAN = \033[36m
@@ -20,8 +21,8 @@ WHITE = \033[37m
 NAME = libft.a
 DIR_NAME = libft
 
-SRCS_DIR = ./srcs
-SRCS =	char/ft_isalnum.c \
+SRC_DIR = ./sources
+SRC =	char/ft_isalnum.c \
 		char/ft_isalpha.c \
 		char/ft_isascii.c \
 		char/ft_isdigit.c \
@@ -126,36 +127,36 @@ SRCS =	char/ft_isalnum.c \
 		\
 		get_next_line/get_next_line.c
 
-OBJS = $(SRCS:.c=.o)
-OBJS_DIR = objs
-OBJS_SUB_DIRS = char list math mem put str ft_printf get_next_line
-OBJS_PRE = $(addprefix $(OBJS_DIR)/, $(OBJS))
+FLAGS = -Wall -Wextra -Werror
 
 INC = -I $(INC_DIR)
 INC_DIR = includes
 
-FLAGS = -Wall -Wextra -Werror
+OBJ = $(SRC:.c=.o)
+OBJ_DIR = objects
+OBJ_SUB_DIRS = char list math mem put str ft_printf get_next_line
+OBJ_PRE = $(addprefix $(OBJ_DIR)/, $(OBJ))
 
 all: $(NAME)
 
-$(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c
-	@echo "$(GREEN)Compiling $(BLUE)$^$(WHITE) > $(CYAN)$@$(WHITE)"
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	@echo "$(MAGENTA)[$(DIR_NAME)] $(GREEN)Compiling $(BLUE)$^$(WHITE) > $(CYAN)$@$(WHITE)"
 	@gcc $(FLAGS) $(INC) -c $^ -o $@
 
-$(OBJS_DIR):
-	@mkdir -p $(OBJS_DIR)
-	@mkdir -p $(addprefix $(OBJS_DIR)/, $(OBJS_SUB_DIRS))
+$(OBJ_DIR):
+	@mkdir -p $(OBJ_DIR)
+	@mkdir -p $(addprefix $(OBJ_DIR)/, $(OBJ_SUB_DIRS))
 
-$(NAME): $(OBJS_DIR) $(OBJS_PRE)
-	@echo "$(GREEN)Compiling $(MAGENTA)$(NAME)$(WHITE) < $(CYAN).o files$(WHITE)"
-	@ar rcs $(NAME) $(OBJS_PRE)
+$(NAME): $(OBJ_DIR) $(OBJ_PRE)
+	@echo "$(MAGENTA)[$(DIR_NAME)] $(GREEN)Compiling $(YELLOW)$(NAME)$(WHITE) < $(CYAN).o files$(WHITE)"
+	@ar rcs $(NAME) $(OBJ_PRE)
 
 clean:
-	@echo "$(RED)Removed $(CYAN)objs from $(DIR_NAME)$(WHITE)"
-	@rm -rf $(OBJS_DIR)
+	@echo "$(MAGENTA)[$(DIR_NAME)] $(RED)Removed $(CYAN)objects$(WHITE)"
+	@rm -rf $(OBJ_DIR)
 
 del:
-	@echo "$(RED)Removed $(MAGENTA)$(NAME)$(WHITE)"
+	@echo "$(MAGENTA)[$(DIR_NAME)] $(RED)Removed $(YELLOW)$(NAME)$(WHITE)"
 	@rm -f $(NAME)
 	@rm -f a.out
 
