@@ -6,7 +6,7 @@
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:54:52 by jukerboe          #+#    #+#             */
-/*   Updated: 2020/04/27 14:52:15 by jukerboe         ###   ########.fr       */
+/*   Updated: 2021/08/31 16:42:40 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include "ft_printf.h"
 # include "get_next_line.h"
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;

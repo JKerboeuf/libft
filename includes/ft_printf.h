@@ -6,7 +6,7 @@
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 17:25:38 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/12/03 15:09:20 by jukerboe         ###   ########.fr       */
+/*   Updated: 2021/08/31 16:42:33 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 # include "libft.h"
 
-typedef struct	s_pf
+typedef struct s_pf
 {
 	va_list		ap;
 	char		*format;
