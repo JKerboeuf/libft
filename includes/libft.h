@@ -6,7 +6,7 @@
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:54:52 by jukerboe          #+#    #+#             */
-/*   Updated: 2021/08/31 16:42:40 by jukerboe         ###   ########.fr       */
+/*   Updated: 2021/09/20 15:04:46 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,7 @@ void				ft_putstr_tab(char **s, size_t size);
 */
 
 int					ft_atoi(char const *str);
+long long			ft_atoll(char const *str);
 char				*ft_itoa(int n);
 int					ft_str_isalnum(char const *str);
 int					ft_str_isalpha(char const *str);

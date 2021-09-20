@@ -6,7 +6,7 @@
 #    By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 11:26:10 by jukerboe          #+#    #+#              #
-#    Updated: 2021/02/19 10:48:29 by jukerboe         ###   ########.fr        #
+#    Updated: 2021/09/20 15:04:23 by jukerboe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,6 +74,7 @@ SRC =	char/ft_isalnum.c \
 		put/ft_putstr_tab.c \
 		\
 		str/ft_atoi.c \
+		str/ft_atoll.c \
 		str/ft_itoa.c \
 		str/ft_str_isalnum.c \
 		str/ft_str_isalpha.c \
