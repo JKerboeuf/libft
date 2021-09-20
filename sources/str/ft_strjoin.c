@@ -6,7 +6,7 @@
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:40:54 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/10/23 11:26:15 by jukerboe         ###   ########.fr       */
+/*   Updated: 2021/09/20 11:36:18 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size1 = ft_strlen(s1);
 	size2 = ft_strlen(s2);
 	i = 0;
-	if (!(res = malloc(sizeof(char) * (size1 + size2 + 1))))
+	res = malloc(sizeof(char) * (size1 + size2 + 1));
+	if (!res)
 		return (NULL);
 	while (i < size1)
 	{

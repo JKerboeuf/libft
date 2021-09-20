@@ -6,7 +6,7 @@
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 15:19:18 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/10/23 15:19:51 by jukerboe         ###   ########.fr       */
+/*   Updated: 2021/09/20 11:38:14 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	i = 0;
 	if (!s)
 		return (NULL);
-	if (!(res = ft_calloc(sizeof(char), (ft_strlen(s) + 1))))
+	res = ft_calloc(sizeof(char), (ft_strlen(s) + 1));
+	if (!res)
 		return (0);
 	while (s[i])
 	{

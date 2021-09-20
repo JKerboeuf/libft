@@ -6,7 +6,7 @@
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 14:01:47 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/10/23 15:25:56 by jukerboe         ###   ########.fr       */
+/*   Updated: 2021/09/20 11:34:53 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	*free_all(char **split)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (split[i])
@@ -34,7 +34,8 @@ static char	**add_word(char **split, char *str)
 	n = 0;
 	while (split[n])
 		n++;
-	if (!(new = ft_calloc(sizeof(char **), n + 2)))
+	new = ft_calloc(sizeof(char **), n + 2);
+	if (!new)
 		return (NULL);
 	n = 0;
 	while (split[n])
@@ -56,7 +57,8 @@ static char	*get_word(const char *s, size_t *i, char c)
 	n = 0;
 	while (s[*i + n] && s[*i + n] != c)
 		n++;
-	if (!(res = ft_calloc(sizeof(char), n + 1)))
+	res = ft_calloc(sizeof(char), n + 1);
+	if (!res)
 		return (NULL);
 	n = 0;
 	while (s[*i + n] && s[*i + n] != c)
@@ -69,13 +71,14 @@ static char	*get_word(const char *s, size_t *i, char c)
 	return (res);
 }
 
-char		**ft_strsplit(char const *s, char c)
+char	**ft_strsplit(char const *s, char c)
 {
 	char		**res;
 	char		*word;
 	size_t		i;
 
-	if (!s || !(res = ft_calloc(sizeof(char **), 1)))
+	res = ft_calloc(sizeof(char **), 1);
+	if (!s || !res)
 		return (NULL);
 	i = 0;
 	while (s[i])
@@ -84,7 +87,8 @@ char		**ft_strsplit(char const *s, char c)
 			i++;
 		else
 		{
-			if (!(word = get_word(s, &i, c)))
+			word = get_word(s, &i, c);
+			if (!word)
 				return (free_all(res));
 			res = add_word(res, word);
 		}

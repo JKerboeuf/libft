@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc_bonus.c                                :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 13:16:17 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/10/10 16:41:24 by jukerboe         ###   ########.fr       */
+/*   Updated: 2021/09/20 11:27:13 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void *res;
+	void	*res;
 
-	if (!(res = malloc(size)))
+	res = malloc(size);
+	if (!res)
 		return (NULL);
 	ft_bzero(res, size);
 	return (res);

@@ -6,7 +6,7 @@
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:40:54 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/10/17 11:56:42 by jukerboe         ###   ########.fr       */
+/*   Updated: 2021/09/20 11:37:29 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	get_size(int n, int sign)
 {
-	int		size;
+	int	size;
 
 	size = 1;
 	n *= sign;
@@ -29,7 +29,7 @@ static int	get_size(int n, int sign)
 		return (size);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*res;
 	int		size_nb;
@@ -41,7 +41,8 @@ char		*ft_itoa(int n)
 	if (n < 0)
 		sign = -1;
 	size_nb = get_size(n, sign);
-	if (!(res = (char*)malloc(sizeof(char) * (size_nb + 1))))
+	res = (char *)malloc(sizeof(char) * (size_nb + 1));
+	if (!res)
 		return (NULL);
 	res[size_nb] = '\0';
 	n *= sign;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pf_print_ptr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 13:49:31 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/11/28 14:32:57 by jukerboe         ###   ########.fr       */
+/*   Updated: 2021/09/14 17:47:42 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	pf_print_ptr(t_pf *pf)
 		pf_putnchar(pf, ' ', (min_len - len));
 }
 
-int		pf_ltohex(long int nb, char *str)
+int	pf_ltohex(long int nb, char *str)
 {
 	char	*hex;
 	int		i;
@@ -36,7 +36,7 @@ int		pf_ltohex(long int nb, char *str)
 
 	i = 0;
 	j = -1;
-	hex = (char[17]){"0123456789abcdef"};
+	hex = (char [17]){"0123456789abcdef"};
 	if (!nb)
 	{
 		str[0] = '0';

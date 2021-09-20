@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 15:11:54 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/10/10 16:42:54 by jukerboe         ###   ########.fr       */
+/*   Updated: 2021/09/20 11:35:22 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ char	*ft_strstr(char const *stack, char const *needle)
 
 	i = 0;
 	if (!needle[i])
-		return ((char*)stack);
+		return ((char *)stack);
 	while (stack[i])
 	{
 		j = 0;
 		while (needle[j] == stack[i + j])
 		{
 			if (needle[j + 1] == '\0')
-				return ((char*)stack + i);
+				return ((char *)stack + i);
 			j++;
 		}
 		i++;

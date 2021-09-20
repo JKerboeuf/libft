@@ -6,7 +6,7 @@
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 15:17:15 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/10/23 15:18:24 by jukerboe         ###   ########.fr       */
+/*   Updated: 2021/09/20 11:35:30 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 char	*ft_strnew(size_t size)
 {
-	return ((char*)ft_memalloc(size + 1));
+	return ((char *)ft_memalloc(size + 1));
 }

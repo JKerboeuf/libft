@@ -6,7 +6,7 @@
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 13:49:26 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/11/28 14:43:21 by jukerboe         ###   ########.fr       */
+/*   Updated: 2021/09/14 17:54:22 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	pf_print_percent(t_pf *pf)
 
 void	pf_print_char(t_pf *pf)
 {
-	int c;
+	int	c;
 
 	c = va_arg(pf->ap, int);
 	if (!pf->minus)

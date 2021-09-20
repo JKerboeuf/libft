@@ -6,15 +6,15 @@
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 13:49:34 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/11/28 15:25:23 by jukerboe         ###   ########.fr       */
+/*   Updated: 2021/09/14 17:54:41 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		pf_nb_len(unsigned int nb)
+int	pf_nb_len(unsigned int nb)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!nb)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pf_print_str.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 13:49:29 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/11/28 15:06:33 by jukerboe         ###   ########.fr       */
+/*   Updated: 2021/09/14 17:47:19 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	pf_print_str(t_pf *pf)
 	int		len;
 	char	*str;
 
-	str = va_arg(pf->ap, char*);
+	str = va_arg(pf->ap, char *);
 	if (!str)
-		str = (char[7]){"(null)"};
+		str = (char [7]){"(null)"};
 	len = ft_strlen(str);
 	if (pf->precision >= len)
 	{

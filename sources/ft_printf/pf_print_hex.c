@@ -6,7 +6,7 @@
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 13:49:40 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/11/28 14:27:54 by jukerboe         ###   ########.fr       */
+/*   Updated: 2021/09/14 17:52:44 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	pf_check_hex(t_pf *pf, int up)
 	pf_print_hex(pf, str, len);
 }
 
-int		pf_itohex(unsigned int nb, char *str, int up)
+int	pf_itohex(unsigned int nb, char *str, int up)
 {
 	char	*hex;
 	int		i;
@@ -29,7 +29,9 @@ int		pf_itohex(unsigned int nb, char *str, int up)
 
 	i = 0;
 	j = -1;
-	hex = up ? (char[17]){"0123456789ABCDEF"} : (char[17]){"0123456789abcdef"};
+	hex = (char [17]){"0123456789abcdef"};
+	if (up)
+		hex = (char [17]){"0123456789ABCDEF"};
 	if (!nb)
 	{
 		str[0] = '0';

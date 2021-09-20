@@ -6,15 +6,15 @@
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 17:25:52 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/11/28 14:30:08 by jukerboe         ###   ########.fr       */
+/*   Updated: 2021/09/14 17:54:09 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		pf_init(t_pf *pf, const char *format)
+int	pf_init(t_pf *pf, const char *format)
 {
-	pf->format = (char*)format;
+	pf->format = (char *)format;
 	pf->ret = 0;
 	pf_reset(pf);
 	return (0);
@@ -31,7 +31,7 @@ void	pf_reset(t_pf *pf)
 	pf->space = 0;
 }
 
-int		ft_printf(const char *format, ...)
+int	ft_printf(const char *format, ...)
 {
 	t_pf	pf;
 	int		i;

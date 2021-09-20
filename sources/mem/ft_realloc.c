@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_realloc_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_realloc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 13:15:54 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/10/10 16:41:53 by jukerboe         ###   ########.fr       */
+/*   Updated: 2021/09/20 11:26:44 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	*ft_realloc(void *ptr, size_t old, size_t size)
 {
-	void *new;
+	void	*new;
 
-	if (!(new = ft_memalloc(size)))
+	new = ft_memalloc(size);
+	if (!new)
 	{
 		ft_memdel(&ptr);
 		return (NULL);

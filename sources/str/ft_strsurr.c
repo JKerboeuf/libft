@@ -6,7 +6,7 @@
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 14:47:46 by jukerboe          #+#    #+#             */
-/*   Updated: 2020/06/24 12:41:01 by jukerboe         ###   ########.fr       */
+/*   Updated: 2021/09/20 11:32:25 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strsurr(char const *src, char add)
 
 	i = 0;
 	j = 1;
-	if (!(res = ft_strnew(ft_strlen(src) + 2)))
+	res = ft_strnew(ft_strlen(src) + 2);
+	if (!res)
 		return (NULL);
 	res[0] = add;
 	while (src[i])

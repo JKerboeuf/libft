@@ -6,7 +6,7 @@
 /*   By: jukerboe <jukerboe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/03 15:07:58 by jukerboe          #+#    #+#             */
-/*   Updated: 2019/12/03 15:08:23 by jukerboe         ###   ########.fr       */
+/*   Updated: 2021/09/20 11:27:51 by jukerboe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_swap(char *a, char *b)
 {
-	char c;
+	char	c;
 
 	c = *a;
 	*a = *b;
